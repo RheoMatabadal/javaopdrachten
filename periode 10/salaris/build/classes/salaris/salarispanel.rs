@@ -1,0 +1,2 @@
+salarispanel
+salarispanel$1knopHandler
