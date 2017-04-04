@@ -11,7 +11,7 @@ public class Functieoplosser extends JFrame {
        JFrame frame = new Functieoplosser ();
         frame.setSize (400,500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("firgos pennen");
+        frame.setTitle("2e grads functie oplosser");
         frame.setContentPane( new panel ());
        
         frame.setVisible(true);

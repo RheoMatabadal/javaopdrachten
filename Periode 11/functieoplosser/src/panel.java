@@ -68,7 +68,15 @@ class berekenhandler implements ActionListener {
 
 class resethandler implements ActionListener {
     public void actionPerformed (ActionEvent e) {
-        
+      txtA.setText("");
+      txtB.setText("");
+      txtC.setText("");
+      txtX.setText("");
+      txtXas.setText("");
+      txtYas.setText("");
+      txtDisc.setText("");
+      txtParab.setText("");
+              
         
 }
     
