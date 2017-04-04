@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package functieoplosser;
+import javax.swing.*;
 
-/**
- *
- * @author rheo
- */
-public class Functieoplosser {
+
+
+public class Functieoplosser extends JFrame {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       JFrame frame = new Functieoplosser ();
+        frame.setSize (400,500);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("firgos pennen");
+        frame.setContentPane( new panel ());
+       
+        frame.setVisible(true);
     }
     
 }
