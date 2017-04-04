@@ -62,6 +62,9 @@ class berekenhandler implements ActionListener {
         String getC = txtC.getText();
         double C = Double.parseDouble(getC);
         
+        double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
+         txtX.setText(String.format("%8.1f",x1));
+        
         
     }
 }
