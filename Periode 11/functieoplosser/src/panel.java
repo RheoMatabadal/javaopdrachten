@@ -27,17 +27,43 @@ public class panel extends JPanel {
    lblParab = new JLabel ("De parabool van deze vergelijking is");
    
    btnBereken = new JButton ("Bereken");
-//   btnBereken.addActionListener(new berekenhandler());
+   btnBereken.addActionListener(new berekenhandler());
    btnReset = new JButton ("Reset");
 //   btnReset.addActionListener(new resethandler());
    
    //hier komt setbounds shit 
-   
-   
-   
-   
-   
+   add (lblA);
+   add (txtA);
+   add (lblB);
+   add (txtB);
+   add (lblC);
+   add (txtC);
+   add (lblX);
+   add (txtX);
+   add (lblXas);
+   add (txtXas);
+   add (lblYas);
+   add (txtYas);
+   add (lblDisc);
+   add (txtDisc);
+   add (lblParab);
+   add (txtParab);
+   add (btnBereken);
+   add (btnReset);
+    }
+  
+class berekenhandler implements ActionListener {
+    public void actionPerformed (ActionEvent e) {
+        
+    }
+}
+
+class resethandler implements ActionListener {
+    public void actionPerformed (ActionEvent e) {
 }
     
-
 }
+}
+
+    
+
