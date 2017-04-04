@@ -29,7 +29,7 @@ public class panel extends JPanel {
    btnBereken = new JButton ("Bereken");
    btnBereken.addActionListener(new berekenhandler());
    btnReset = new JButton ("Reset");
-//   btnReset.addActionListener(new resethandler());
+  btnReset.addActionListener(new resethandler());
    
    //hier komt setbounds shit 
    add (lblA);
@@ -55,11 +55,21 @@ public class panel extends JPanel {
 class berekenhandler implements ActionListener {
     public void actionPerformed (ActionEvent e) {
         
+        String getA = txtA.getText();
+        double A = Double.parseDouble(getA);
+        String getB = txtB.getText();
+        double B = Double.parseDouble(getB);
+        String getC = txtC.getText();
+        double C = Double.parseDouble(getC);
+        
+        
     }
 }
 
 class resethandler implements ActionListener {
     public void actionPerformed (ActionEvent e) {
+        
+        
 }
     
 }
