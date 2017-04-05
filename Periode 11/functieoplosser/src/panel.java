@@ -63,7 +63,14 @@ class berekenhandler implements ActionListener {
         double B = Double.parseDouble(getB);
         String getC = txtC.getText();
         double C = Double.parseDouble(getC);
+        double Disc ;
         
+        Disc = Math.pow(B,2)-4*A*C;
+        if (Disc >= 0 ) {
+            
+        }
+            
+            
         double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
         double x2 = (-B-Math.sqrt(B*B-4*A*C))/(2*A);
         lblVerg.setText(String.format("%8.1f", x2));
@@ -84,6 +91,7 @@ class resethandler implements ActionListener {
       txtYas.setText("");
       txtDisc.setText("");
       txtParab.setText("");
+      lblVerg.setText("");
               
         
 }
