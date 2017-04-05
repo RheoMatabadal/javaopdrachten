@@ -3,7 +3,7 @@ import java.awt.event.*;
 public class panel extends JPanel {
     
     private JTextField txtA , txtB , txtC, txtX, txtXas, txtYas,txtDisc, txtParab  ;
-    private JLabel lblA, lblB, lblC, lblX, lblXas, lblYas, lblDisc, lblParab;
+    private JLabel lblA, lblB, lblC, lblX, lblXas, lblYas, lblDisc, lblParab, lblVerg;
     private JButton btnBereken, btnReset;
     
     public panel () {
@@ -25,6 +25,7 @@ public class panel extends JPanel {
    lblYas = new JLabel ("snijpunt y-as");
    lblDisc = new JLabel ("De discriminant is");
    lblParab = new JLabel ("De parabool van deze vergelijking is");
+   lblVerg = new JLabel();
    
    btnBereken = new JButton ("Bereken");
    btnBereken.addActionListener(new berekenhandler());
@@ -50,6 +51,7 @@ public class panel extends JPanel {
    add (txtParab);
    add (btnBereken);
    add (btnReset);
+   add (lblVerg);
     }
   
 class berekenhandler implements ActionListener {
@@ -63,7 +65,10 @@ class berekenhandler implements ActionListener {
         double C = Double.parseDouble(getC);
         
         double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
-         txtX.setText(String.format("%8.1f",x1));
+        double x2 = (-B-Math.sqrt(B*B-4*A*C))/(2*A);
+        lblVerg.setText(String.format("%8.1f", x2));
+        txtX.setText(String.format("%8.1f", x1));
+        
         
         
     }
