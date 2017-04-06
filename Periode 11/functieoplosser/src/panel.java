@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.text.DecimalFormat;
 public class panel extends JPanel {
     
     private JTextField txtA , txtB , txtC, txtX, txtXas, txtYas,txtDisc, txtParab  ;
@@ -64,6 +65,7 @@ class berekenhandler implements ActionListener {
         String getC = txtC.getText();
         double C = Double.parseDouble(getC);
         double Disc ;
+        double Yas;
         
         //discriminant
         Disc = Math.pow(B,2)-4*A*C;
@@ -72,9 +74,10 @@ class berekenhandler implements ActionListener {
         if (Disc >= 0 ) {
            double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
         double x2 = (-B-Math.sqrt(B*B-4*A*C))/(2*A);
-        txtX.setText(String.format("%8.1f", x2,  x1));  
+        txtX.setText(String.format("%8.1f",x1, "en", x2  ));  
+        // die outputting hiervan nog checken moet string zijn want int gaat t optellen
         }
-        if (Disc == 0){
+        else if (Disc == 0){
            double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A); 
            txtX.setText(String.format("%8.1f", x1));  
         }
@@ -83,7 +86,11 @@ class berekenhandler implements ActionListener {
            txtX.setText("geen geldige wortel"); 
         }    
         
-        
+        // formaterign 
+         DecimalFormat form = new DecimalFormat("###.#");
+       // snijpunt y as
+         Yas = A*Math.pow(0,2)+B*0+C;
+           txtYas.setText("(0,"    +  form.format (Yas) + (")"));
       // parabool
        if ( A == 0){
                
