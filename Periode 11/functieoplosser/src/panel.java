@@ -77,10 +77,13 @@ class berekenhandler implements ActionListener {
         if (Disc >= 0 ) {
            double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
         double x2 = (-B-Math.sqrt(B*B-4*A*C))/(2*A);
-        txtX.setText(String.format("%8.1f",x1, "en", x2  ));  
+        
+        String uit1 = String.valueOf(x1);
+        String uit2 = String.valueOf(x2);
+        txtX.setText( uit1 + " en" + uit2  );  
          
-        txtXas.setText("("    +  form.format (x1) + (",0)"));
-        txtXas.setText("("    +  form.format (x2) + (",0)"));
+        txtXas.setText("("    +  form.format (uit1) + (",0)")+ "("    +  form.format (uit2) + (",0)") );
+        //txtXas.setText("("    +  form.format (x2) + (",0)"));
         // die outputting hiervan nog checken moet string zijn want int gaat t optellen
         }
         else if (Disc == 0){
