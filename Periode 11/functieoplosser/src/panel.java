@@ -1,3 +1,5 @@
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
@@ -9,19 +11,28 @@ public class panel extends JPanel {
     
     public panel () {
    //setLayout (null);
-   txtA = new JTextField(5);
+   this.setBackground(Color.YELLOW);
    
+   txtA = new JTextField(5);
+   txtA.setHorizontalAlignment(JTextField.CENTER);
    txtB = new JTextField(5);
+   txtB.setHorizontalAlignment(JTextField.CENTER);
    txtC = new JTextField(5);
+   txtC.setHorizontalAlignment(JTextField.CENTER);
    txtX = new JTextField (10);
+   txtX.setHorizontalAlignment(JTextField.CENTER);
    txtX.setEditable(false);
    txtXas = new JTextField (10);
    txtXas.setEditable(false);
+   txtXas.setHorizontalAlignment(JTextField.CENTER);
    txtYas = new JTextField (10);
    txtYas.setEditable(false);
+   txtYas.setHorizontalAlignment(JTextField.CENTER);
    txtDisc = new JTextField (10);
    txtDisc.setEditable(false);
+   txtDisc.setHorizontalAlignment(JTextField.CENTER);
    txtParab = new JTextField (10);
+   txtParab.setHorizontalAlignment(JTextField.CENTER);
    txtParab.setEditable(false);
    
    lblA = new JLabel("Vul A in");
@@ -35,8 +46,14 @@ public class panel extends JPanel {
    lblVerg = new JLabel();
    
    btnBereken = new JButton ("Bereken");
+   btnBereken.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 12));
+btnBereken.setForeground(Color.YELLOW);
+btnBereken.setBackground(Color.BLUE);
    btnBereken.addActionListener(new berekenhandler());
    btnReset = new JButton ("Reset");
+    btnReset.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 12));
+btnReset.setForeground(Color.YELLOW);
+btnReset.setBackground(Color.BLUE);
   btnReset.addActionListener(new resethandler());
    
    //hier komt setbounds shit 
