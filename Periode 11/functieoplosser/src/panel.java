@@ -8,15 +8,21 @@ public class panel extends JPanel {
     private JButton btnBereken, btnReset;
     
     public panel () {
-   // setLayout (null);
+   //setLayout (null);
    txtA = new JTextField(5);
+   
    txtB = new JTextField(5);
    txtC = new JTextField(5);
    txtX = new JTextField (10);
+   txtX.setEditable(false);
    txtXas = new JTextField (10);
+   txtXas.setEditable(false);
    txtYas = new JTextField (10);
+   txtYas.setEditable(false);
    txtDisc = new JTextField (10);
+   txtDisc.setEditable(false);
    txtParab = new JTextField (10);
+   txtParab.setEditable(false);
    
    lblA = new JLabel("Vul A in");
    lblB = new JLabel("vul B in");
