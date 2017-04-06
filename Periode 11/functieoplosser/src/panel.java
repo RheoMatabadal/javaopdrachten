@@ -21,7 +21,7 @@ public class panel extends JPanel {
    lblA = new JLabel("Vul A in");
    lblB = new JLabel("vul B in");
    lblC = new JLabel ("vul C in");
-   lblX = new JLabel ("Xwaarde");
+   lblX = new JLabel ("Xwaarde(n)");
    lblXas = new JLabel ("snijpunt X-as");
    lblYas = new JLabel ("snijpunt y-as");
    lblDisc = new JLabel ("De discriminant is");
@@ -82,8 +82,10 @@ class berekenhandler implements ActionListener {
         String uit2 = String.valueOf(x2);
         txtX.setText( uit1 + " en" + uit2  );  
          
-        txtXas.setText("("    +  form.format (uit1) + (",0)")+ "("    +  form.format (uit2) + (",0)") );
-        //txtXas.setText("("    +  form.format (x2) + (",0)"));
+       String uit3 =("("    +  (x1) + (",0)"));
+       String uit4 =("("    +   (x2) + (",0)"));
+        txtXas.setText(uit3 + "en" + uit4);
+//txtXas.setText("("    +  form.format (x2) + (",0)"));
         // die outputting hiervan nog checken moet string zijn want int gaat t optellen
         }
         else if (Disc == 0){
