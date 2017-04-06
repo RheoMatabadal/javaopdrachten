@@ -67,31 +67,38 @@ class berekenhandler implements ActionListener {
         double Disc ;
         double Yas;
         
+        // formaterign 
+         DecimalFormat form = new DecimalFormat("###.#");
+         
         //discriminant
         Disc = Math.pow(B,2)-4*A*C;
-        txtDisc.setText(String.format("%8.1f",Disc));
+        txtDisc.setText(String.format("%8.0f",Disc));
        
         if (Disc >= 0 ) {
            double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A);
         double x2 = (-B-Math.sqrt(B*B-4*A*C))/(2*A);
         txtX.setText(String.format("%8.1f",x1, "en", x2  ));  
+         
+        txtXas.setText("("    +  form.format (x1) + (",0)"));
+        txtXas.setText("("    +  form.format (x2) + (",0)"));
         // die outputting hiervan nog checken moet string zijn want int gaat t optellen
         }
         else if (Disc == 0){
            double x1 = (-B+Math.sqrt(B*B-4*A*C))/(2*A); 
            txtX.setText(String.format("%8.1f", x1));  
+            txtXas.setText("("    +  form.format (x1) + (",0)"));
         }
        
         else {
            txtX.setText("geen geldige wortel"); 
         }    
         
-        // formaterign 
-         DecimalFormat form = new DecimalFormat("###.#");
+        
        // snijpunt y as
          Yas = A*Math.pow(0,2)+B*0+C;
            txtYas.setText("(0,"    +  form.format (Yas) + (")"));
-      // parabool
+    
+           // parabool
        if ( A == 0){
                
                txtParab.setText ("geen parabool");
