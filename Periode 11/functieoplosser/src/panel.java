@@ -37,6 +37,7 @@ public class panel extends JPanel {
    txtVerg = new JTextField(20);
    txtVerg.setEditable(false);
    txtVerg.setHorizontalAlignment(JTextField.CENTER);
+   txtVerg.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 16));
    
    lblA = new JLabel("Vul A in");
    lblB = new JLabel("vul B in");
