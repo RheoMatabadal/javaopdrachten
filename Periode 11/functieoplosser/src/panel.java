@@ -5,12 +5,12 @@ import java.awt.event.*;
 import java.text.DecimalFormat;
 public class panel extends JPanel {
     
-    private JTextField txtA , txtB , txtC, txtX, txtXas, txtYas,txtDisc, txtParab  ;
+    private JTextField txtA , txtB , txtC, txtX, txtXas, txtYas,txtDisc, txtParab, txtVerg  ;
     private JLabel lblA, lblB, lblC, lblX, lblXas, lblYas, lblDisc, lblParab, lblVerg;
     private JButton btnBereken, btnReset;
     
     public panel () {
-   setLayout (null);
+  // setLayout (null);
    this.setBackground(Color.YELLOW);
    
    txtA = new JTextField(5);
@@ -34,6 +34,9 @@ public class panel extends JPanel {
    txtParab = new JTextField (10);
    txtParab.setHorizontalAlignment(JTextField.CENTER);
    txtParab.setEditable(false);
+   txtVerg = new JTextField(20);
+   txtVerg.setEditable(false);
+   txtVerg.setHorizontalAlignment(JTextField.CENTER);
    
    lblA = new JLabel("Vul A in");
    lblB = new JLabel("vul B in");
@@ -92,6 +95,7 @@ btnReset.setBackground(Color.BLUE);
    add (btnBereken);
    add (btnReset);
    add (lblVerg);
+   add (txtVerg);
     }
   
 class berekenhandler implements ActionListener {
@@ -157,6 +161,9 @@ class berekenhandler implements ActionListener {
                txtParab.setText ("Dal Parabool");
                
            }
+      DecimalFormat df = new DecimalFormat("###.#");
+           
+           txtVerg.setText(""+df.format(A)+"x\u00B2 + " + df.format (B)+"x + " + df.format(C));   
         
     }
 }
@@ -172,6 +179,7 @@ class resethandler implements ActionListener {
       txtDisc.setText("");
       txtParab.setText("");
       lblVerg.setText("");
+      txtVerg.setText("");
               
         
 }
