@@ -10,7 +10,7 @@ public class panel extends JPanel {
     private JButton btnBereken, btnReset;
     
     public panel () {
-  // setLayout (null);
+   setLayout (null);
    this.setBackground(Color.YELLOW);
    
    txtA = new JTextField(5);
@@ -74,9 +74,13 @@ btnReset.setBackground(Color.BLUE);
    txtXas.setBounds(330,40,140,20);
    lblYas.setBounds(230,70, 100,10);
    txtYas.setBounds(330,70,140,20);
-   lblDisc.setBounds(10,100,100,20);
-   txtDisc.setBounds(60,100,140,20);
-   
+   lblDisc.setBounds(10,100,170,10);
+   txtDisc.setBounds(220,100,240,20);
+   lblParab.setBounds(10,130,220,10);
+   txtParab.setBounds(220,130,240,20);
+   txtVerg.setBounds(10,160,450,10);
+           
+           
    add (lblA);
    add (txtA);
    add (lblB);
