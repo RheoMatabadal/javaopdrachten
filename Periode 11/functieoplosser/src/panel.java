@@ -37,7 +37,7 @@ public class panel extends JPanel {
    txtVerg = new JTextField(20);
    txtVerg.setEditable(false);
    txtVerg.setHorizontalAlignment(JTextField.CENTER);
-   txtVerg.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 16));
+   txtVerg.setFont(new java.awt.Font("Arial", Font.ITALIC | Font.BOLD, 12));
    
    lblA = new JLabel("Vul A in");
    lblB = new JLabel("vul B in");
@@ -75,11 +75,12 @@ btnReset.setBackground(Color.BLUE);
    lblYas.setBounds(230,70, 100,10);
    txtYas.setBounds(330,70,140,20);
    lblDisc.setBounds(10,100,170,10);
-   txtDisc.setBounds(220,100,240,20);
+   txtDisc.setBounds(220,100,250,20);
    lblParab.setBounds(10,130,220,10);
-   txtParab.setBounds(220,130,240,20);
-   txtVerg.setBounds(10,160,450,10);
-           
+   txtParab.setBounds(220,130,250,20);
+   txtVerg.setBounds(125,160,220,20);
+    btnBereken.setBounds(135,185,100,20);
+    btnReset.setBounds(235,185,100,20);
            
    add (lblA);
    add (txtA);

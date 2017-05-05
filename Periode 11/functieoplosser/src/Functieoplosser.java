@@ -9,7 +9,7 @@ public class Functieoplosser extends JFrame {
      */
     public static void main(String[] args) {
        JFrame frame = new Functieoplosser ();
-        frame.setSize (500,400);
+        frame.setSize (500,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("2e graads functie oplosser");
         frame.setContentPane( new panel ());
