@@ -16,10 +16,12 @@ myConn = DriverManager.getConnection(url, user, password);
 // 2. Create a statement
 myStmt = myConn.createStatement();
 // 3. Execute SQL query
-String sql = "update medewerkers " + " set voornaam ='kevin'"
-+ " where id=1";
-myStmt.executeUpdate(sql);
-System.out.println("update complete.");
+String sql = "delete from medewerkers where voornaam ='kevin'";
+int rowsAffeted = myStmt.executeUpdate(sql);
+System.out.println("Row Affectec:"+ rowsAffeted);
+    System.out.println("delete complete");
+
+
 } catch (Exception exc) {
 exc.printStackTrace();
 } finally {
