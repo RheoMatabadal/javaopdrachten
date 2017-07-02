@@ -14,6 +14,15 @@ hs_err_pid*
 /Periode 11/functieoplosser/build/
 /Periode 11/oefening66/nbproject/private/
 /Periode 11/oefening66/build/
+<<<<<<< HEAD
 /Periode 11/functieoplosser/dist/
 /Periode 11/oefening66/dist/
 /periode 12/monteurRooster/nbproject/private/
+=======
+/Periode 11/jdbctest/nbproject/private/
+/jdbctest/nbproject/private/
+/periode 12/jdbctest/nbproject/private/
+/periode 12/jdbctest/build/
+>>>>>>> 0c8d76ba36ae2c535aa84ecc68c023de39cda88a
+/periode 12/contest/nbproject/private/
+/periode 12/contest/build/
